@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+  <meta name="theme-color" content="#101322">
+  <meta name="description" content="A branching visual novel inspired by The Cloud Dream of the Nine.">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='8' fill='%23151927'/%3E%3Ctext x='32' y='45' text-anchor='middle' font-size='42' fill='%23dbc48b'%3E%E9%9B%B2%3C/text%3E%3C/svg%3E">
+  <title>The Nine Cloud Dream — A visual novel</title>
+  <link rel="preload" href="assets/fonts/CormorantGaramond-normal-400-2.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/fonts/fonts.css">
+  <link rel="stylesheet" href="assets/fonts/cjk.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main id="game" class="game-shell">
+    <section id="title-screen" class="title-screen" aria-label="Title screen">
+      <div class="title-art" aria-hidden="true"></div>
+      <div class="title-grain" aria-hidden="true"></div>
+      <div class="title-top"><span class="seal">雲</span><span class="eyebrow">A DREAM IN NINE LIVES</span><span class="title-rule"></span><span class="title-edition">AN INTERACTIVE TALE · 2026</span></div>
+      <div class="title-lockup">
+        <p class="title-kicker">BASED ON THE CLASSIC NOVEL BY KIM MAN-JUNG</p>
+        <h1>The Nine<br><em>Cloud</em> Dream</h1>
+        <p class="title-subtitle">A tale of love, ambition &amp; waking</p>
+        <button id="begin-button" class="begin-button"><span>Begin the dream</span><b>↗</b></button>
+        <button id="continue-button" class="continue-button" hidden>Continue your last dream</button>
+        <p class="title-hint">A STORY THAT REMEMBERS YOUR CHOICES</p>
+      </div>
+      <div class="title-bottom"><span>雲夢九記</span><span>SCROLL TO ENTER</span><span>EST. IN A MOMENT</span></div>
+      <button id="title-settings" class="icon-button title-settings" aria-label="Settings" title="Settings">⚙</button>
+    </section>
+
+    <section id="story-screen" class="story-screen" hidden aria-label="Visual novel">
+      <div class="scene-art" id="scene-art" aria-hidden="true"><div class="scene-wash"></div><div class="scene-vignette"></div><div class="scene-grain"></div><div id="particles" class="particles"></div><div id="figure-left" class="figure figure-left"></div><div id="figure-right" class="figure figure-right"></div></div>
+      <header class="topbar">
+        <a class="wordmark" href="#" id="wordmark" aria-label="The Nine Cloud Dream"><span class="wordmark-seal">雲</span><span>THE NINE CLOUD DREAM<small>AN INTERACTIVE TALE</small></span></a>
+        <div class="chapter-display"><span class="chapter-index" id="chapter-index">I</span><span id="chapter-name">THE TEMPLE OF DAWN</span></div>
+        <div class="top-actions">
+          <button class="icon-button" id="journal-button" title="Dream journal (J)" aria-label="Dream journal">▤</button>
+          <button class="icon-button" id="save-button" title="Save dream (S)" aria-label="Save dream">⌑</button>
+          <button class="icon-button" id="load-button" title="Load dream (L)" aria-label="Load dream">↶</button>
+          <button class="icon-button" id="settings-button" title="Settings" aria-label="Settings">⚙</button>
+        </div>
+      </header>
+      <div class="scene-caption"><span class="caption-dot"></span><span id="scene-caption">HWAJEON MOUNTAIN · DAWN</span></div>
+      <div class="story-side-note" id="story-side-note">書 · ONE LIFE, NINE DREAMS</div>
+      <section id="dialogue" class="dialogue" aria-live="polite">
+        <div class="dialogue-inner">
+          <div class="speaker-row"><span id="speaker" class="speaker"></span><span class="speaker-ornament">✳</span><span class="dialogue-count" id="dialogue-count">01 / 09</span></div>
+          <p id="dialogue-text" class="dialogue-text"></p>
+          <div id="choices" class="choices" hidden></div>
+          <button id="advance-button" class="advance-button" aria-label="Continue story"><span id="advance-label">CONTINUE</span><span class="advance-arrow">↓</span></button>
+        </div>
+      </section>
+      <button class="edge-control edge-prev" id="prev-button" aria-label="Previous scene" title="Previous">‹</button>
+      <button class="edge-control edge-next" id="next-button" aria-label="Continue" title="Continue">›</button>
+      <footer class="story-footer">
+        <span id="route-label">THE SEEKER</span><span class="footer-progress"><span id="progress-fill"></span></span><span id="progress-label">01 / 09</span>
+        <button id="auto-button" class="footer-control" aria-label="Auto advance">AUTO <i></i></button>
+        <button id="skip-button" class="footer-control" aria-label="Skip seen text">SKIP <i></i></button>
+        <button id="history-button" class="footer-control" aria-label="Read history">HISTORY</button>
+      </footer>
+    </section>
+
+    <div id="overlay" class="overlay" hidden>
+      <section class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+        <button id="modal-close" class="modal-close" aria-label="Close">×</button>
+        <div class="modal-seal">雲</div><p class="modal-kicker">A QUIET MOMENT</p><h2 id="modal-title">Settings</h2>
+        <div id="modal-content" class="modal-content"></div>
+      </section>
+    </div>
+    <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>

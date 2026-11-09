@@ -1,0 +1,9 @@
+https://fonts.gstatic.com/s/cormorantgaramond/v21/co3smX5slCNuHLi8bLeY9MK7whWMhyjYrGFEsdtdc62E6zd58jD-iNM8.woff2 CormorantGaramond-italic-400-1.woff2
+https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2 CormorantGaramond-normal-400-2.woff2
+https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2 CormorantGaramond-normal-500-3.woff2
+https://fonts.gstatic.com/s/cormorantgaramond/v21/co3bmX5slCNuHLi8bLeY9MK7whWMhyjYqXtK.woff2 CormorantGaramond-normal-600-4.woff2
+https://fonts.gstatic.com/s/spectral/v15/rnCu-xNNww_2s0amA9M8qtHEWfSFXQ.woff2 Spectral-italic-300-5.woff2
+https://fonts.gstatic.com/s/spectral/v15/rnCt-xNNww_2s0amA9M8onrmTA.woff2 Spectral-italic-400-6.woff2
+https://fonts.gstatic.com/s/spectral/v15/rnCs-xNNww_2s0amA9uSsG3BafY.woff2 Spectral-normal-300-7.woff2
+https://fonts.gstatic.com/s/spectral/v15/rnCr-xNNww_2s0amA9M5kng.woff2 Spectral-normal-400-8.woff2
+https://fonts.gstatic.com/s/spectral/v15/rnCs-xNNww_2s0amA9vKsW3BafY.woff2 Spectral-normal-500-9.woff2
